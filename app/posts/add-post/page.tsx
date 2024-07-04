@@ -56,7 +56,7 @@ const { data:posts, isLoading, isError, isSuccess } = useQuery({
 
     return (
         <>
-        <h1 className='flex justify-center items-center'>This is "Post add Page"</h1>
+        <h1 className='flex justify-center items-center'>This is Post add Page</h1>
         <form>
             <label htmlFor="title">Title:</label>
             <input

@@ -9,6 +9,8 @@ export default function Home() {
       <hr />
       <Link className="flex justify-center p-2" href="/posts">Posts</Link> 
       <Link className="flex justify-center p-2" href="/posts/add-post">Add Post</Link> 
+      <Link className="flex justify-center p-2" href="/posts/add-post">Delete Post</Link> 
+      <Link className="flex justify-center p-2" href="/posts/add-post">Multiple Post Modify</Link> 
     </>
   )
 }

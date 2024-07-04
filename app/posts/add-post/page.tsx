@@ -97,7 +97,7 @@ const { data:posts, isLoading, isError, isSuccess } = useQuery({
             <br />
             <h1 className='flex justify-center items-center'>Amar Mote Post: ({posts?.posts.length})</h1>
           <hr/>
-        {isLoading ? <h1 className='flex justify-center items-center'>Loading......</h1> : posts?.posts.map((post)=>(
+        {isLoading ? <h1 className='flex justify-center items-center'>Loading......</h1> : posts?.posts.map((post:any)=>(
           
             <h1 className="flex justify-center" key={post.id}>  
               {post.title}

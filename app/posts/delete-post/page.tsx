@@ -57,7 +57,7 @@ export default function DeletePostPage() {
       {isLoading ? (
         <h1 className="flex justify-center items-center">Loading posts...</h1>
       ) : isError ? (
-        <div>Error loading posts: {isError.message}</div>
+        <div>Error loading posts: </div>
       ) : isSuccess && posts?.posts.length > 0 ? (
         <ul>
           {posts.posts.map((post) => (

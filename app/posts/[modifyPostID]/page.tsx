@@ -46,7 +46,7 @@ export default function Posts() {
     if (singelPost) {
       setTitle(singelPost?.title);
       setContent(singelPost?.content);
-    }
+    };
   }, [singelPost]);
 console.log(singelPost?.title)
   const queryClient = useQueryClient();
@@ -90,7 +90,7 @@ console.log(singelPost?.title)
       {isLoading ? (
         <h1 className="flex justify-center items-center">Loading singelPost...</h1>
       ) : isError ? (
-        <div>Error loading singelPost: {isError.message}</div>
+        <div>Error loading singelPost</div>
       ) : isSuccess && singelPost ? (
         <>
           {mutation.isPending ? (

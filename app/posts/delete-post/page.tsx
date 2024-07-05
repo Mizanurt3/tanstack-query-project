@@ -14,10 +14,10 @@ export default function DeletePostPage() {
       // - Remove the deleted post from local state (if applicable)
       // - Show a temporary success message
       console.log("Deleting post...", deletedPostId);
-      queryClient.setQueryData(["posts"], (oldData) => {
-        if (oldData?.posts) {
+      queryClient.setQueryData(["posts"], (oldData :any) => {
+        if (oldData?.posts ) {
           return {
-            posts: oldData.posts.filter((post) => post.id !== deletedPostId),
+            posts: oldData.posts.filter((post :any) => post.id !== deletedPostId),
           };
         }
         return oldData;
@@ -46,7 +46,7 @@ export default function DeletePostPage() {
     },
   });
 
- const handleDeletePost = async (postId) => {
+ const handleDeletePost = async (postId:any) => {
     mutation.mutate(postId);
   };
 
@@ -60,7 +60,7 @@ export default function DeletePostPage() {
         <div>Error loading posts: </div>
       ) : isSuccess && posts?.posts.length > 0 ? (
         <ul>
-          {posts.posts.map((post) => (
+          {posts.posts.map((post:any) => (
             <li key={post.id}>
               {post.title}
               <button onClick={() => handleDeletePost(post.id)}>Delete</button>

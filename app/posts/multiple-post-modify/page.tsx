@@ -9,12 +9,12 @@ export default function Posts() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  const handleSelectPost = (postId) => {
+  const handleSelectPost = (postId:any) => {
     setSelectedPostId(postId);
     getInitialPostData(postId);
   };
 
-  const getInitialPostData = async (postId) => {
+  const getInitialPostData = async (postId:any) => {
     if (!postId) return;
 
     const response = await axios.get(
@@ -114,7 +114,7 @@ export default function Posts() {
                   </tr>
                 </thead>
                 <tbody>
-                  {posts.posts.map((post) => (
+                  {posts.posts.map((post:any) => (
                     <tr key={post.id}>
                       <td>{post.title}</td>
                       <td>{post.content}</td>

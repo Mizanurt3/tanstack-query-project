@@ -26,14 +26,14 @@ export default function DeletePostPage() {
     onError: (error, variables, context) => {
       console.log("Error deleting post:", error.message);
       // Revert optimistic UI update (if applicable)
-      queryClient.invalidateQueries(["posts"]); // Refetch posts on error
+      queryClient.invalidateQueries({queryKey:["posts"]}); // Refetch posts on error
     },
     onSuccess: (data, variables, context) => {
       console.log("Post deleted successfully:", data);
       // Update UI to reflect successful deletion
       // - Show a confirmation message
       // - Refetch posts or update local state (if applicable)
-      queryClient.invalidateQueries(["posts"]); // Refetch posts on success
+      queryClient.invalidateQueries({queryKey:["posts"]}); // Refetch posts on success
     },
   });
 

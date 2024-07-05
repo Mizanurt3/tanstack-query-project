@@ -11,7 +11,7 @@ export default function Posts() {
     return <h1>Success</h1>;
   };
 
-  const handleDeleteError = (errorMessage) => {
+  const handleDeleteError = (errorMessage:any) => {
     // Handle deletion errors, such as:
     // - Display an error message to the user
     // - Log the error for debugging
@@ -90,7 +90,7 @@ export default function Posts() {
                   </tr>
                 </thead>
                 <tbody>
-                  {posts.posts.map((post) => (
+                  {posts.posts.map((post:any) => (
                     <tr key={post.id}>
                       <td>{post.title}</td>
                       <td>{post.content}</td>
